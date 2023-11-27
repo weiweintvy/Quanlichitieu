@@ -1,0 +1,49 @@
+<div class="container-fluid padding">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4 position-relative">
+                <i class="fas fa-galaxy position-absolute top-0 start-0 translate-middle" style="font-size: 1.5em; left: -35px; top: -10px;"></i>
+                <span class="bg-gradient bg-primary px-4 py-2 rounded" style="background: radial-gradient(circle, #000000, #1f114f, #351f75, #354095, #1c4c9f); -webkit-background-clip: text;">Thêm thông tin Thu/Chi</span>
+            </h2>
+            <div class="alert-container"></div>
+            <form (submit)="addExpense()" class="p-4 border rounded">
+                <div class="mb-3">
+                    <label for="expenseDate" class="form-label bold-white-label">Ngày:</label>
+                    <div class="date-input-container">
+                      <input type="date" id="expenseDate" [(ngModel)]="expenseDate" name="expenseDate" required class="form-control">
+                      <label class="placeholder-label" *ngIf="!expenseDate">Chọn ngày</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="productName" class="form-label bold-white-label">Thông tin thu/chi:</label>
+                    <input type="text" id="productName" [(ngModel)]="productName" name="productName" required class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label bold-white-label">Hình thức:</label>
+                    <select id="category" [(ngModel)]="category" name="category" (change)="onCategoryChange()" class="form-control" [ngModelOptions]="{standalone: true}">                        
+                        <option value="Thu">Thu</option>
+                        <option value="Chi">Chi</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="expenseAmount" class="form-label bold-white-label">Số tiền:</label>
+                    <input type="number" id="expenseAmount" [(ngModel)]="expenseAmount" name="expenseAmount" required class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label bold-white-label">Hạng Mục:</label>
+                    <select id="HangMuc" [(ngModel)]="HangMuc" name="HangMuc" class="form-control" [ngModelOptions]="{standalone: true}">                        
+                        <option value="Giáo dục">Giáo dục</option>
+                        <option value="Y Tế">Y Tế</option>
+                        <option value="Nhu cầu thiết yếu">Nhu cầu thiết yếu</option>
+                        <option value="Du lịch">Du lịch</option>
+                        <option value="Tiết kiệm">Tiết kiệm</option>
+                        <option value="Đầu tư">Đầu tư</option>
+                        <option value="Thiện Nguyện">Thiện nguyện</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success">Add Expense</button>
+                <a href="/dashboard" class="btn btn-secondary ms-2">Return to Dashboard</a>
+            </form>
+        </div>
+    </div>
+</div>

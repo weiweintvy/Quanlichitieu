@@ -1,0 +1,42 @@
+
+  .sidebar {
+    background-color: rgba(243, 237, 237, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Set sidebar height to viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if the content exceeds viewport height */
+  }
+  
+  /* Adjust main content margin to create space for the fixed sidebar */
+  .col-md-10 {
+    margin-left: 300px; /* Adjust this value to match the width of your sidebar */
+  }
+  /* Style for submenu */
+.submenu {
+    display: none;
+    padding-left: 20px; /* Indentation for submenu items */
+  }
+  
+  /* Style to display the submenu when its parent link is hovered */
+  .nav-item:hover .submenu {
+    display: block;
+  }
+  
+  /* Separator between menu items */
+  .nav-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for icons */
+  .bi {
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+  .submenu .nav-link {
+    font-size: 0.9rem; /* Adjust the font size as needed */
+    white-space: nowrap; /* Ensures text stays in one line */
+    overflow: hidden; /* Hides any overflow text */
+    text-overflow: ellipsis; /* Displays ellipsis if text overflows */
+    padding: 8px 10px; /* Adjust padding as needed */
+  }

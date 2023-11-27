@@ -1,0 +1,66 @@
+.csvDataTable {
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 1000px;
+    margin-bottom: 1rem;
+    color: #333;
+    background-color: transparent;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    font-weight: bold;
+    color:white;
+    text-align: center;
+    padding: 1rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    color: #495057;
+  }
+  
+  .table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+  .blurred-bg {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px); 
+  }
+  .blurred-bg-chart {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px); 
+  }
+  .row-thu {
+    font-weight: bold;
+    background-color: rgba(37, 82, 109, 0.3);
+  }
+  
+  .row-chi {
+    font-weight: bold;
+    color: black !important;
+    background-color: rgba(95, 22, 90, 0.3);
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    overflow-y: auto; 
+  }
+  
+  .col-md-10 {
+    margin-left: 300px; 
+  }
